@@ -5,18 +5,19 @@ import Sidebar from "./component/Sidebar";
 import Home from "./Home";
 import AddEmployee from "./AddEmployee";
 import ViewEmployees from "./ViewEmployees";
+import SalaryTable from "./SalaryTable";
 import AddDocument from "./AddDocument";
 import ViewDocuments from "./ViewDocuments";
 import AddIssuedDocument from "./AddIssuedDocument";
 import ViewIssuedDocuments from "./ViewIssuedDocuments";
-import MailPage from "./mails"; 
+import MailPage from "./mails";
 import Vendor from "./Vendor";
 import Customer from "./Customer";
 import Bill from "./Bill";
 import AttendanceRequestForm from "./attendence/AttendanceRequestForm";
-import MarkAttendance from "./attendence/MarkAttendance"; 
-import LeaveRequest from "./attendence/LeaveRequestDashboard"; 
-import OvertimeRequest from "./attendence/OvertimeRequestDashboard"; 
+import MarkAttendance from "./attendence/MarkAttendance";
+import LeaveRequest from "./attendence/LeaveRequestDashboard";
+import OvertimeRequest from "./attendence/OvertimeRequestDashboard";
 import POHRequest from "./attendence/POHRequestDashboard";
 import Attendecenew from "./attendence/Attendancenew";
 import MonthSummaryForm from "./attendence/Monthsummary";
@@ -44,6 +45,7 @@ const Dashboard = () => {
       Employees: [
         { name: "Add Employee", path: "/employees/add" },
         { name: "View Employees", path: "/employees/view" },
+        { name: "View Sallary", path: "/employees/sallary" },
       ],
       Documents: [
         { name: "Add Document", path: "/documents/add" },
@@ -56,10 +58,10 @@ const Dashboard = () => {
       Vendor: [
         { name: "Vendor", path: "/vendors" },
         { name: "Customer", path: "/customer" },
-        { name: "Bill", path: "/bill"},
+        { name: "Bill", path: "/bill" },
       ],
       Attendance: [
-        
+
         { name: "Mark Attendence", path: "/attendance/new" },
         { name: "Attendance Request", path: "/attendance/request" },
         { name: "Leave Request", path: "/attendance/leave-request" },
@@ -68,7 +70,7 @@ const Dashboard = () => {
         { name: "Attendance Summary", path: "/attendance/month" },
         { name: "Set Weekend", path: "/attendance/weekend" },
         { name: "appoint leave", path: "/attendance/setleave" },
-        
+
       ],
       Mails: [
         { name: "Mail", path: "/mails" },
@@ -97,38 +99,39 @@ const Dashboard = () => {
             <Routes>
               {/* Home Route */}
               <Route path="/" element={<Home />} />
-              
+
               {/* Employee Routes */}
               <Route path="/employees/add" element={<AddEmployee />} />
               <Route path="/employees/view" element={<ViewEmployees />} />
-              
+              <Route path="/employees/sallary" element={<SalaryTable />} />
+
               {/* Document Routes */}
               <Route path="/documents/add" element={<AddDocument />} />
               <Route path="/documents/view" element={<ViewDocuments />} />
-              
+
               {/* Issued Document Routes */}
               <Route path="/issued-documents/add" element={<AddIssuedDocument />} />
               <Route path="/issued-documents/view" element={<ViewIssuedDocuments />} />
-              
+
               {/* Mail Route */}
-              <Route path="/mails" element={<MailPage />} /> 
+              <Route path="/mails" element={<MailPage />} />
               <Route path="/mails/records" element={<Mailtable />} />
-              
+
               {/* Vendor Routes */}
-              <Route path="/vendors" element={<Vendor />} /> 
-              <Route path="/customer" element={<Customer />} /> 
-              <Route path="/bill" element={<Bill />} /> 
-              
+              <Route path="/vendors" element={<Vendor />} />
+              <Route path="/customer" element={<Customer />} />
+              <Route path="/bill" element={<Bill />} />
+
               {/* Attendance Routes */}
               <Route path="/attendance/new" element={<Attendecenew />} />
               <Route path="/attendance/request" element={<AttendanceRequestForm />} />
               <Route path="/attendance/leave-request" element={<LeaveRequest />} />
               <Route path="/attendance/overtime-request" element={<OvertimeRequest />} />
               <Route path="/attendance/poh-request" element={<POHRequest />} />
-              <Route path="/attendance/month" element={<MonthSummaryForm/>} />
-              <Route path="/attendance/weekend" element={<Weekend/>} />
-              <Route path="/attendance/setleave" element={<Setleave/>} />
-              <Route path="/setting" element={<Setting/>} />
+              <Route path="/attendance/month" element={<MonthSummaryForm />} />
+              <Route path="/attendance/weekend" element={<Weekend />} />
+              <Route path="/attendance/setleave" element={<Setleave />} />
+              <Route path="/setting" element={<Setting />} />
 
             </Routes>
           </div>
