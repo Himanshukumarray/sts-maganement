@@ -14,7 +14,6 @@ const AddIssuedDoc = () => {
   const [fileName, setFileName] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  
   const [employeeList, setEmployeeList] = useState([]); // Store all employees
   const [filteredEmployees, setFilteredEmployees] = useState([]); // Filtered suggestions
 

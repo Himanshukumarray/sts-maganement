@@ -5,6 +5,7 @@ import Sidebar from "./component/Sidebar";
 import Home from "./Home";
 import AddEmployee from "./AddEmployee";
 import ViewEmployees from "./ViewEmployees";
+import AddSalaryForm from "./AddSalary";
 import SalaryTable from "./SalaryTable";
 import AddDocument from "./AddDocument";
 import ViewDocuments from "./ViewDocuments";
@@ -45,7 +46,8 @@ const Dashboard = () => {
       Employees: [
         { name: "Add Employee", path: "/employees/add" },
         { name: "View Employees", path: "/employees/view" },
-        { name: "View Sallary", path: "/employees/sallary" },
+        { name: "Add  Salary", path: "/employees/addS" },
+        { name: "View Salary", path: "/employees/salary" },
       ],
       Documents: [
         { name: "Add Document", path: "/documents/add" },
@@ -103,7 +105,8 @@ const Dashboard = () => {
               {/* Employee Routes */}
               <Route path="/employees/add" element={<AddEmployee />} />
               <Route path="/employees/view" element={<ViewEmployees />} />
-              <Route path="/employees/sallary" element={<SalaryTable />} />
+              <Route path="/employees/addS" element={<AddSalaryForm/>} />
+              <Route path="/employees/salary" element={<SalaryTable />} />
 
               {/* Document Routes */}
               <Route path="/documents/add" element={<AddDocument />} />
