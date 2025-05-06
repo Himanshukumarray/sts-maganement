@@ -17,7 +17,7 @@ const settingsOptions = [
   { icon: <FiLogOut />, label: 'Logout' }
 ];
 
-const colorOptions = ['red', 'blue', 'green', 'yellow', 'purple', 'pink'];
+const colorOptions = ['red', 'blue', 'green', 'yellow', 'purple', 'pink' ,'orange'];
 
 const Setting = () => {
   const [selectedOption, setSelectedOption] = useState(settingsOptions[0].label);
