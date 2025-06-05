@@ -75,7 +75,7 @@ const Setting = () => {
         </ul>
       </aside>
 
-      Content Area
+      {/* Content Area */}
       <main className={`flex-1 p-8 ${theme === 'dark' ? 'dark' : ''} ${fontSize}`}>  
         {selectedOption === 'Change Navbar Color' ? (
           <>
