@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Settings } from "lucide-react"; 
 
 const Navbar = ({ isMobile, toggleSidebar, onNavClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
