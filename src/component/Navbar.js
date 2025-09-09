@@ -50,7 +50,7 @@ const Navbar = ({ isMobile, toggleSidebar, onNavClick }) => {
           <Link to="/" onClick={() => onNavClick("Mails")} className="px-4 hover:text-gray-300">Mails</Link>
           <Link to="/" onClick={() => onNavClick("Vendor")} className="px-4 hover:text-gray-300">Vendor</Link>
           <Link to="/" onClick={() => onNavClick("Attendance")} className="px-4 hover:text-gray-300">Attendance</Link>
-          {/* <Link to="/setting" className="hover:text-gray-300"><Settings className="w-6 h-6" /></Link> */}
+          <Link to="/setting" className="hover:text-gray-300"><Settings className="w-6 h-6" /></Link>
         </div>
       )}
 
